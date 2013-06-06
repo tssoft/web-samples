@@ -1,0 +1,13 @@
+<project name="qunit-example" default="run-qunit" basedir=".">
+    <description>Пример интеграции QUnit и ant</description>
+
+	<property environment="env"/>
+	
+	<target name="run-qunit" description="Запуск тестов QUnit с помощью PhantomJS">
+		<exec executable="${env.PHANTOMJS_HOME}/phantomjs" failonerror="true">
+			<arg value="${basedir}/test/tools/runner.js" />
+			<arg value="file:///${basedir}/test/tests.html?noglobals=true" />
+		</exec>
+	</target>
+
+</project>
