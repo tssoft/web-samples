@@ -1,0 +1,21 @@
+.accordion-body {
+    height: 200px;
+    transition: 0.1s linear all;
+    overflow-y: auto;
+}
+
+.accordion-body.ng-hide-add,
+.accordion-body.ng-hide-remove {
+    display: block !important;
+    height: 200px;
+    overflow-y: hidden;
+}
+
+.accordion-body.ng-hide-remove.ng-hide-remove-active {
+    height: 0;
+    overflow-y: hidden;
+}
+
+.accordion-body.ng-hide {
+    height: 0;
+}

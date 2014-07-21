@@ -1,0 +1,33 @@
+<div class="row" ng-controller="BarController as barCtrl">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1>This is the 'Bar' view</h1>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <form>
+            <div class="form-group row">
+                <div class="col-md-2">
+                    <label>Message</label>
+                </div>
+                <div class="col-md-5">
+                    <text-editor params="barCtrl.textEditorParams"></text-editor>
+                </div>
+                <div class="col-md-5">
+                    <a class="btn btn-block btn-warning" role="button"
+                       message-poster
+                       params="barCtrl.messageSenderParams"
+                       apply="true">Save [element.on('click')]; $apply()</a>
+                    <button class="btn btn-primary btn-block" ng-click="appCtrl.messageManager.getMessages()">Get from DB</button>
+                </div>
+            </div>
+        </form>
+        <div collapsable title="This is collapsable" class="row">
+            <message-list messages-getter="appCtrl.getMessages()" class="col-md-12"></message-list>
+        </div>
+
+    </div>
+</div>

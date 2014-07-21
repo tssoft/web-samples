@@ -1,0 +1,21 @@
+<div>
+    <br/>
+    <div class="row" ng-show="messages.length">
+        <div class="col-md-4">
+            <label>Sort by:</label>
+        </div>
+        <div class="col-md-7">
+            <select class="form-control" ng-options="field as field for field in sortableFields" ng-model="sortBy"></select>
+        </div>
+    </div>
+
+    <ol>
+        <li ng-repeat="message in messages|orderBy:sortBy">
+            {{message.toString() + ' || ' + (message.date | date:'short')}}
+        </li>
+    </ol>
+
+    <span ng-hide="messages.length">No messages in database yet.</span>
+
+
+</div>

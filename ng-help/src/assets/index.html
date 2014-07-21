@@ -1,0 +1,70 @@
+<html>
+<head>
+    <link rel="stylesheet" href="lib/style/bootstrap.min.css"/>
+    <link rel="stylesheet" href="lib/style/bootstrap-theme.min.css"/>
+
+    <link rel="stylesheet" href="dummy/app.css"/>
+
+    <!-- lib -->
+    <script src="lib/script/angular.min.js"></script>
+    <script src="lib/script/angular-route.min.js"></script>
+    <script src="lib/script/angular-sanitize.min.js"></script>
+    <script src="lib/script/angular-locale_ru-ru.js"></script>
+    <script src="lib/script/angular-animate.min.js"></script>
+
+    <script src="lib/script/underscore-min.js"></script>
+
+    <script src="lib/script/jquery-2.0.3.min.js"></script>
+    <!-- lib end -->
+
+    <!-- app -->
+    <script src="dummy/app.js"></script>
+    <script src="dummy/app-controller.js"></script>
+
+    <!-- foo -->
+    <script src="dummy/foo/foo.js"></script>
+    <script src="dummy/foo/foo-controller.js"></script>
+
+    <!-- bar -->
+    <script src="dummy/bar/bar.js"></script>
+    <script src="dummy/bar/bar-controller.js"></script>
+
+    <!-- message -->
+    <script src="dummy/components/message/message.js"></script>
+    <script src="dummy/components/message/message-service.js"></script>
+    <script src="dummy/components/message/message-manager-factory.js"></script>
+    <script src="dummy/components/message/message-poster/message-poster-directive.js"></script>
+
+    <!-- directives -->
+    <script src="dummy/components/draggable/draggable-directive.js"></script>
+    <script src="dummy/components/message/message-list/message-list-directive.js"></script>
+    <script src="dummy/components/text-editor/text-editor-directive.js"></script>
+    <script src="dummy/components/collapsable/collapsable-directive.js"></script>
+
+    <!-- config -->
+    <script src="dummy/configuration/config.js"></script>
+    <script src="dummy/configuration/url-config.js"></script>
+
+</head>
+<!-- в index.html -->
+<body ng-app="dummy" ng-controller="AppController as appCtrl">
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Dummy</a>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="#foo">Foo</a></li>
+            <li><a href="#bar">Bar</a></li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>
+<div ng-view>
+
+</div>
+</body>
+</html>
