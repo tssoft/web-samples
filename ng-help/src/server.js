@@ -15,7 +15,7 @@ http.createServer(app).listen(1337, function () {
     console.log('Express server listening on port ' + 1337);
 });
 
-var CONNECTION_STRING = 'mongodb://wakata:123456@ds049878.mongolab.com:49878/wakata';
+var CONNECTION_STRING = '';
 
 
 var API_MESSAGES_URL = '/api/messages';
@@ -35,8 +35,7 @@ app.get(API_MESSAGES_URL, function (req, res) {
         if (err) {
             res.send(500, err);
             return;
-        }
-        ;
+        };
 
         var collection = db.collection('messages');
 
