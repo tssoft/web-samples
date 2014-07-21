@@ -1,0 +1,11 @@
+<div>
+    <input class="form-control col-md-10"
+           ng-model="params.text"
+           ng-if="!params.multiline"/>
+    <textarea class="form-control col-md-10"
+              ng-model="params.text"
+              ng-if="params.multiline"
+              rows="5"
+              cols="30"
+              style="resize: none"></textarea>
+</div>

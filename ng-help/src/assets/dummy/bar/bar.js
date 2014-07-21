@@ -1,0 +1,1 @@
+var bar = angular.module('dummy.bar', ['dummy.message']);

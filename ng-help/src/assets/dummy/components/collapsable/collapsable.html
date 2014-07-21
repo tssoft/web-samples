@@ -1,0 +1,8 @@
+<div>
+    <div>
+        <h2>{{title}}
+            <button ng-click="toggle()" class="btn btn-default">{{collapsed? 'Expand' : 'Collapse'}}</button>
+        </h2>
+    </div>
+    <div ng-transclude class="accordion-body" ng-show="!collapsed"></div>
+</div>
